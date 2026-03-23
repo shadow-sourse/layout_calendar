@@ -2,7 +2,7 @@ $padding: 10px;
 $gap: 1px;
 $day-size: 100px;
 $column: 7;
-$main_color: #eee;
+$main-color: #eee;
 $border-color: #000;
 $border-size: 1px;
 $color-hover: #ffbfcb;
@@ -17,11 +17,12 @@ $days-week: (
 );
 
 * {
-  margin: 0;
-  padding: 0;
+box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,8 +41,10 @@ body {
     padding: 0;
     width: $day-size;
     height: $day-size;
-    background-color: $main_color;
-    border: $border-size $border-color solid;
+    background-color: $main-color;
+    border-color: $border-color;
+    border-style: solid;
+    border-width: $border-size;
     display: flex;
     justify-content: center;
     align-items: center;
